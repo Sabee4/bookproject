@@ -2,7 +2,7 @@
 // props = read only
 
 import React from "react";
-import Booklist from "./Booklist";
+import Booklist from "./components/Booklist";
 import "./App.css";
 const App = () => (
   <section>

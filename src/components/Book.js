@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { TitleComponent } from './TitleComponent';
+import { AuthorComponent } from './AuthorComponent';
+import { ButtonComponent } from './ButtonComponent';
+import { ImageComponent } from './ImageComponent';
  
 export default class Book extends Component {
   constructor(props) {
@@ -23,23 +26,14 @@ export default class Book extends Component {
 
   render() {
     const { img, title, author } = this.props.info;
+    const { functionAdd } = this.addCount;
     return (
-      <article className="book">
-        <img src={img} width="150" alt="book" />
+      <article className="book">        
+        <ImageComponent img={img}/>   
         <div>
           <TitleComponent title={title}/>         
-          
-           {this.state.count<=0 ? ( <h3> </h3>):( this.state.count>1?<h5>{this.state.count} books added</h5>:<h5>{this.state.count} book added</h5>)}
-        
-          <button type="button" onClick={this.addCount}>
-            +
-          </button>
-          <button type="button" onClick={this.resetCount}>
-            reset
-          </button>
-          <button type="button" onClick={this.lowerCount}>
-            -
-          </button>
+          <AuthorComponent author={author}/>   
+           <ButtonComponent />     
         </div> 
       </article>
     
