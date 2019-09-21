@@ -25,7 +25,7 @@ export default class Book extends Component {
   };
 
   render() {
-    const { img, title, author } = this.props.info;
+    const { img, title, author } = this.props.info; //get all the props
     const { functionAdd } = this.addCount;
     return (
       <article className="book">        
