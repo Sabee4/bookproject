@@ -3,7 +3,7 @@ import { TitleComponent } from './TitleComponent';
 import { AuthorComponent } from './AuthorComponent';
 import { ButtonComponent } from './ButtonComponent';
 import { ImageComponent } from './ImageComponent';
- 
+
 export default class Book extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +27,9 @@ export default class Book extends Component {
   render() {
     const { img, title, author } = this.props.info; //get all the props     
     return (
+     
+     
+
       <article className="book">        
         <ImageComponent img={img}/>   
         <div>
@@ -35,7 +38,7 @@ export default class Book extends Component {
            <ButtonComponent />     
         </div> 
       </article>
-    
+     
     );
   }
 }
