@@ -27,9 +27,6 @@ export default class Book extends Component {
   render() {
     const { img, title, author } = this.props.info; //get all the props     
     return (
-     
-     
-
       <article className="book">        
         <ImageComponent img={img}/>   
         <div>

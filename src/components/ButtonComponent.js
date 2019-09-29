@@ -1,26 +1,6 @@
 import React from 'react';
 import booksData from "./bookData";
  
-/*
-class ButtonComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.functionPassed = this.functionPassed.bind(this);
-    }
-    functionPassed () {
-      // do something
-      this.props.sendFunction();
-      
-    }
-    render () {
-      return (
-        //something
-        <button type="button" onClick={this.addCount}>  +   </button>
-        
-      );
-    }
-  }
-*/
   class ButtonComponent extends React.Component {
     constructor(props) {
       super(props);
