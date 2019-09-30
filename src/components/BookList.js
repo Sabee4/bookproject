@@ -3,7 +3,7 @@ import Book from "./Book";
 import booksData from "./bookData";
 import BookFound from "./BookFound";
 import BookNotFound from "./BookNotFound";
-export default class DisplayBook extends Component {
+export default class BookList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,33 +26,29 @@ export default class DisplayBook extends Component {
                 return item.title.toLowerCase().indexOf(SearchItem)!==-1; }
                 } );  
 
-    if( filteredBooks.length==0){
+    if( filteredBooks.length==0){ //use bem type naming
         return (   
-            <section>
-               <div class="paddingClass">                   
-               <div className="form-group">
+            <section class="book-list__padding">                
+               <div className="book-list__form-group">
                            <input type="text" 
-                           className="form-control" 
+                           className="book-list__form-control" 
                            placeholder="Search for Collection"                         
                            onChange={this.updateSearch.bind(this)}/>
                            </div>    
-                           <BookNotFound collectionbooks={this.state.books} searchItem={this.state.search} />  
-          </div>
+                           <BookNotFound collectionbooks={this.state.books} searchItem={this.state.search} />           
             </section>
           );
     }
     else{
-        return (   
-            <section>                
-               <div class="paddingClass"> 
-                 <div className="form-group">
+        return (  
+        <section class="book-list__padding">       
+                  <div className="book-list__form-group">
                            <input type="text" 
-                           className="form-control" 
+                           className="book-list__form-control" 
                            placeholder="Search for Collection"                         
                            onChange={this.updateSearch.bind(this)}/>
                    </div>
-                <BookFound filteredBooks={ filteredBooks } />  
-              </div>
+                <BookFound filteredBooks={ filteredBooks } />               
             </section>
           );
     }  
