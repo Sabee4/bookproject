@@ -5,12 +5,12 @@ class NavbarComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
-     <nav>
+     <nav class="navbar__nav">
 
-     <ul>
-  <li><a href="#">Link 1</a></li>
-  <li><a href="#">Link 2</a></li>
-  <li><a href="#">Link 3</a></li>
+     <ul class="navbar__ul">
+  <li class="navbar__li"><a href="#">Link 1</a></li>
+  <li class="navbar__li"><a href="#">Link 2</a></li>
+  <li class="navbar__li"><a href="#">Link 3</a></li>
   
 </ul>
      </nav>
