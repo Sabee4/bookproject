@@ -1,13 +1,31 @@
-// state, this.setState = hold/access/change data of component
-// props = read only
-
-import React from "react";
-import Booklist from "./Booklist";
+import React, { Component } from "react";
+import BookList from "./components/BookList";
+import SearchComponent from "./components/SearchComponent";
+import {NavbarComponent} from "./components/NavbarComponent";
 import "./App.css";
-const App = () => (
-  <section>
-    <Booklist />
-  </section>
-);
+export default class App extends Component {  
+  constructor(props) {
+    super(props);
+    this.state = {      
+      search:' ' 
+    };   
+    
+  }
 
-export default App;
+
+
+render() {
+ 
+  return(
+  <section>  
+    <div class="container">
+    <NavbarComponent />    
+    <SearchComponent/>   
+    <BookList/> 
+       </div>   
+  </section>  
+
+);
+}
+}
+ 

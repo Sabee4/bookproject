@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TitleComponent } from './TitleComponent';
  
 export default class Book extends Component {
   constructor(props) {
@@ -26,8 +27,8 @@ export default class Book extends Component {
       <article className="book">
         <img src={img} width="150" alt="book" />
         <div>
-          <h4>Title : {title}</h4>
-          <h6>Author : {author}</h6>
+          <TitleComponent title={title}/>         
+          
            {this.state.count<=0 ? ( <h3> </h3>):( this.state.count>1?<h5>{this.state.count} books added</h5>:<h5>{this.state.count} book added</h5>)}
         
           <button type="button" onClick={this.addCount}>
